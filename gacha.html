@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Gacha</h2>
+<button onclick="roll()">Roll</button>
+<div id="result"></div>
+
+<script type="module">
+import { GachaSystem } from "./js/systems/GachaSystem.js";
+const g = new GachaSystem();
+window.roll = () => {
+  const r = g.roll();
+  result.innerText = r.name + " (" + r.rarity + ")";
+};
+</script>
+</body>
+</html>
