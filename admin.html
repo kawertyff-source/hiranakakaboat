@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="css/admin.css"></head>
+<body>
+<h2>Admin Panel</h2>
+<button onclick="ban()">Ban Player</button>
+<button onclick="resetRank()">Reset Rank</button>
+
+<script type="module">
+import { AdminSystem } from "./js/systems/AdminSystem.js";
+const admin = new AdminSystem();
+
+window.ban = () => admin.banPlayer("testUID");
+window.resetRank = () => admin.resetRank("testUID");
+</script>
+</body>
+</html>
