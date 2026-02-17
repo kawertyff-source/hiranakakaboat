@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="css/main.css"></head>
+<body>
+<h2>Register</h2>
+<input id="email">
+<input id="pass" type="password">
+<button onclick="register()">Register</button>
+<script type="module">
+import { registerUser } from "./js/systems/AuthSystem.js";
+window.register = () => {
+  registerUser(email.value, pass.value);
+};
+</script>
+</body>
+</html>
